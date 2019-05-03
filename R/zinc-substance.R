@@ -4,7 +4,7 @@
 #' Standardize ZINC ID to have format ZINC[0-9]{12}
 #' Specifically take all numeric values, on the right, pad with zeros to get to 12 numbers and then prepend with 'ZINC'
 #' @export
-standardize_zinc_ids <- function(zinc_ids){
+standardize_zinc_ids <- function(zinc_ids)
 	plyr::llply(zinc_ids, function(zinc_id){
 		if(is.na(zinc_id){
 			return(NA)
