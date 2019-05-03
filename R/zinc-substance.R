@@ -4,15 +4,15 @@
 #' Standardize ZINC ID to have format ZINC[0-9]{12}
 #' Specifically take all numeric values, on the right, pad with zeros to get to 12 numbers and then prepend with 'ZINC'
 #' @export
-standardize_zinc_ids <- function(zinc_ids)
-	plyr::llply(zinc_ids, function(zinc_id){
-		if(is.na(zinc_id){
-			return(NA)
-		} else {
-			paste0("ZINC", zinc_id %>% stringr::str_extract("[0-9]+$") %>% stringr::str_pad(12, "0"))
-		}
-	) %>% unlist()
-}
+#standardize_zinc_ids <- function(zinc_ids)
+#	plyr::llply(zinc_ids, function(zinc_id){
+#		if(is.na(zinc_id){
+#			return(NA)
+#		} else {
+#			paste0("ZINC", zinc_id %>% stringr::str_extract("[0-9]+$") %>% stringr::str_pad(12, "0"))
+#		}
+#	) %>% unlist()
+#}
 
 
 #' Process results of substance_info to be more user-friendly
